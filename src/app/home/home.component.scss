@@ -1,0 +1,58 @@
+.title {
+  margin-top: 120px;
+
+  &__container {
+    text-align: center;
+  }
+}
+
+.link {
+
+  &__container {
+    display: inline-block;
+    margin-right: 60px;
+  }
+
+  &__image {
+    display: block;
+    width: 436px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 20px 20px 0 0;
+
+  }
+
+  &__text {
+
+    width: 436px;
+    height: 92px;
+    flex-shrink: 0;
+    background-color: #032EDD;
+    border-radius: 0 0 20px 20px;
+
+    & div {
+      display: flex;
+      width: 243px;
+      flex-direction: column;
+      flex-shrink: 0;
+
+      padding-top: 20px;
+      margin-inline: auto;
+
+      color: #FFF;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 128%;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.--send {
+  background: url("../../assets/img/OMNI_green 1.png"), lightgray -0.419px -30.771px / 101.139% 121.785% no-repeat;
+}
+
+.--back {
+  background: url("../../assets/img/package1.png"), lightgray -10px -1.649px / 102.523% 122.63% no-repeat;
+}
