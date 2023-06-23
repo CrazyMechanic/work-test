@@ -1,0 +1,29 @@
+.small {
+  background-color: #57565E;
+  width: 186px;
+  height: 100px;
+}
+
+.medium {
+  background-color: #E6E6E6;
+  width: 240px;
+  height: 100px;
+}
+
+.big {
+  background-color: green;
+  width: 304px;
+  height: 150px;
+}
+
+.package {
+  &__container {
+    background-color: aliceblue;
+  }
+
+  &__to-xl {
+    display: grid;
+    grid-template-columns: 186px 240px;
+    gap: 20px;
+  }
+}
