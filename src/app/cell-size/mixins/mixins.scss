@@ -1,0 +1,31 @@
+@mixin word-size {
+  color: #032EDD;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@mixin number-size {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@mixin cont-style {
+  border-radius: 4px;
+  border: 1px solid #CECECE;
+  background: #FFF;
+  box-shadow: 0px 0px 6px 0px rgba(85, 115, 133, 0.40);
+}
+
+@mixin small-w {
+  width: 186px;
+}
+
+@mixin medium-w {
+  width: 240px;
+}
+
+@mixin big-w {
+  width: 304px;
+}

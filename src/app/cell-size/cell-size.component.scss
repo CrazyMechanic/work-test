@@ -1,29 +1,122 @@
-.small {
-  background-color: #57565E;
-  width: 186px;
-  height: 100px;
-}
+@use "mixins" as *;
 
-.medium {
-  background-color: #E6E6E6;
-  width: 240px;
-  height: 100px;
-}
-
-.big {
-  background-color: green;
-  width: 304px;
-  height: 150px;
+.container {
+  width: 770px;
+  margin-top: 112px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .package {
+  @include cont-style;
+  display: flex;
+
   &__container {
-    background-color: aliceblue;
+    display: flex;
+    gap: 20px;
   }
 
   &__to-xl {
     display: grid;
     grid-template-columns: 186px 240px;
+    grid-template-rows: 80px 116px 132px;
     gap: 20px;
+  }
+
+  &__after-xl {
+    display: grid;
+    grid-template-columns: 304px;
+    grid-template-rows: 140px 208px;
+    gap: 20px;
+  }
+
+  &__img {
+    margin-left: 16px;
+
+    &-xxs {
+      margin-top: 19px;
+      margin-right: 32px;
+    }
+
+    &-xs {
+      margin-top: 26px;
+      margin-right: 24px;
+    }
+
+    &-s {
+      margin-top: 26px;
+      margin-right: 16px;
+    }
+
+    &-m {
+      margin-top: 10px;
+      margin-right: 38px;
+    }
+
+    &-l {
+      margin-top: 12px;
+      margin-right: 34px;
+    }
+
+    &-xl {
+      margin-top: 12px;
+      margin-right: 30px;
+    }
+
+    &-xxl {
+      margin-top: 12px;
+      margin-right: 65px;
+    }
+
+    &-xxxl {
+      margin-top: 16px;
+      margin-right: 46px;
+    }
+  }
+
+  &__about {
+    & h3 {
+      margin-top: 20px;
+      margin-bottom: 0;
+      @include word-size;
+    }
+
+    & p {
+      margin-top: 0;
+      @include number-size;
+    }
+  }
+}
+
+.btn {
+  height: 60px;
+  flex-shrink: 0;
+
+  border-radius: 4px;
+
+  &__container {
+    margin-top: 52px;
+  }
+
+  &__back {
+    width: 180px;
+
+    border: 2px solid #032EDD;
+    background: #FFF;
+  }
+
+
+  &__submit {
+    margin-left: 334px;
+
+    width: 256px;
+    border-style: none;
+    background: #032EDD;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 128%;
+    text-transform: uppercase;
   }
 }

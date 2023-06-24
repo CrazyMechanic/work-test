@@ -1,19 +1,104 @@
 <div class="container">
-  <h2>Оберіть розмір посилки</h2>
+  <h2 class="title">Оберіть розмір посилки</h2>
 
   <div class="package__container">
     <div class="package__to-xl">
-      <div class="small package__to-xl-xxs">XXS</div>
-      <div class="medium package__to-xl-m">M</div>
-      <div class="small package__to-xl-xs">XS</div>
-      <div class="medium package__to-xl-l">L</div>
-      <div class="small package__to-xl-s">S</div>
-      <div class="medium package__to-xl-xl">XL</div>
+      <div class="package package__to-xl-xxs">
+        <div class="package__img package__img-xxs">
+          <app-xxs></app-xxs>
+        </div>
+
+        <div class="package__about package__about-xxs">
+          <h3>XXS</h3>
+          <p>20х11 см</p>
+        </div>
+      </div>
+
+      <div class="package package__to-xl-m">
+        <div class="package__img package__img-m">
+          <app-m></app-m>
+        </div>
+
+        <div class="package__about package__about-m">
+          <h3>M</h3>
+          <p>20x21 см</p>
+        </div>
+      </div>
+
+      <div class="package package__to-xl-xs">
+        <div class="package__img package__img-xs">
+          <app-xs></app-xs>
+        </div>
+
+        <div class="package__about package__about-xs">
+          <h3>XS</h3>
+          <p>20x16 см</p>
+        </div>
+      </div>
+
+      <div class="package package__to-xl-l">
+        <div class="package__img package__img-l">
+          <app-l></app-l>
+        </div>
+
+        <div class="package__about package__about-l">
+          <h3>L</h3>
+          <p>38x16 см</p>
+        </div>
+      </div>
+
+      <div class="package package__to-xl-s">
+        <div class="package__img package__img-s">
+          <app-s></app-s>
+        </div>
+
+        <div class="package__about package__about-s">
+          <h3>S</h3>
+          <p>38x11 см</p>
+        </div>
+      </div>
+
+      <div class="package package__to-xl-xl">
+        <div class="package__img package__img-xl">
+          <app-xl></app-xl>
+        </div>
+
+        <div class="package__about package__about-xl">
+          <h3>XL</h3>
+          <p>38x21 см</p>
+        </div>
+      </div>
     </div>
 
     <div class="package__after-xl">
-      <div class="big package__after-xl-xxl"></div>
-      <div class="big package__after-xl-xxxl"></div>
+      <div class="package package__after-xl-xxl">
+        <div class="package__img package__img-xxl">
+          <app-xxl></app-xxl>
+        </div>
+
+        <div class="package__about package__about-xxl">
+          <h3>XXL</h3>
+          <p>64x21 см</p>
+        </div>
+      </div>
+
+      <div class="package package__after-xl-xxxl">
+        <div class="package__img package__img-xxxl">
+          <app-xxxl></app-xxxl>
+        </div>
+
+        <div class="package__about package__about-xxxl">
+          <h3>XXXL</h3>
+          <p>64x36 см</p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="btn__container">
+    <button class="btn btn__back">НАЗАД</button>
+    <button class="btn btn__submit">ПІДТВЕРДИТИ</button>
+  </div>
 </div>
+
+
