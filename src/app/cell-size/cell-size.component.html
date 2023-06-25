@@ -1,9 +1,10 @@
 <div class="container">
   <h2 class="title">Оберіть розмір посилки</h2>
 
-  <div class="package__container">
+  <div (click)="click($event)" class="package__container">
     <div class="package__to-xl">
-      <div class="package package__to-xl-xxs">
+
+      <div class="package package__to-xl-xxs" id="200.0x110.0x405.0">
         <div class="package__img package__img-xxs">
           <app-xxs></app-xxs>
         </div>
@@ -14,7 +15,7 @@
         </div>
       </div>
 
-      <div class="package package__to-xl-m">
+      <div class="package package__to-xl-m" id="200.0x209.0x405.0">
         <div class="package__img package__img-m">
           <app-m></app-m>
         </div>
@@ -25,7 +26,7 @@
         </div>
       </div>
 
-      <div class="package package__to-xl-xs">
+      <div class="package package__to-xl-xs" id="200.0x160.0x405.0">
         <div class="package__img package__img-xs">
           <app-xs></app-xs>
         </div>
@@ -36,7 +37,7 @@
         </div>
       </div>
 
-      <div class="package package__to-xl-l">
+      <div class="package package__to-xl-l" id="380.0x160.0x405.0">
         <div class="package__img package__img-l">
           <app-l></app-l>
         </div>
@@ -47,7 +48,7 @@
         </div>
       </div>
 
-      <div class="package package__to-xl-s">
+      <div class="package package__to-xl-s" id="380.0x110.0x405.0">
         <div class="package__img package__img-s">
           <app-s></app-s>
         </div>
@@ -58,7 +59,7 @@
         </div>
       </div>
 
-      <div class="package package__to-xl-xl">
+      <div class="package package__to-xl-xl" id="380.0x209.0x405.0">
         <div class="package__img package__img-xl">
           <app-xl></app-xl>
         </div>
@@ -71,7 +72,7 @@
     </div>
 
     <div class="package__after-xl">
-      <div class="package package__after-xl-xxl">
+      <div class="package package__after-xl-xxl" id="645.0x210.0x405.0">
         <div class="package__img package__img-xxl">
           <app-xxl></app-xxl>
         </div>
@@ -82,7 +83,7 @@
         </div>
       </div>
 
-      <div class="package package__after-xl-xxxl">
+      <div class="package package__after-xl-xxxl" id="645.0x365.0x405.0">
         <div class="package__img package__img-xxxl">
           <app-xxxl></app-xxxl>
         </div>
@@ -97,7 +98,7 @@
 
   <div class="btn__container">
     <button (click)="back()" class="btn btn__back">НАЗАД</button>
-    <button (click)="submit()" class="btn btn__submit" disabled>ПІДТВЕРДИТИ</button>
+    <button (click)="submit()" class="btn btn__submit" disabled id="submit">ПІДТВЕРДИТИ</button>
   </div>
 </div>
 

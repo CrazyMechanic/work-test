@@ -16,11 +16,11 @@ export class HttpService {
 
   // Basic device information.GET
   // Response data: use data.device field to display device number
-  basicUrl: string = `${this.url}/api/2.0.0/public/device/${this.device_uid}`;
+  basicUrl: string = `${this.url}/api/2.0.0/public/device/${this.device_uid}/`;
 
   // Information about available cells.GET
   // Response data: use field data.cell_types - size array (use params.width and params.height for analysis)
-  infoUrl: string = `${this.url}/api/2.0.0/public/orders/device/${this.device_uid}/cells/statuses/?type=5&width=10&height=5`;
+  infoUrl: string = `${this.url}/api/2.0.0/public/orders/device/${this.device_uid}/cells/statuses/?type=5`;
 
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
@@ -28,13 +28,14 @@ export class HttpService {
   getInfo(): Observable<any> {
     return this.http.get(`${this.basicUrl}`, this.httpOptions)
       .pipe(
-        map(res => {
-          console.log(res);
+        map((res: any) => {
+          const obj: any = res;
+          return obj;
         }),
       )
       .pipe(
-        tap(_ => this.log('fetched heroes')),
-        catchError(this.handleError<any[]>('getHeroes', [])),
+        tap(_ => this.log('fetched getInfo')),
+        catchError(this.handleError<any[]>('getInfo', [])),
       );
 
   }
@@ -42,15 +43,14 @@ export class HttpService {
   getStatuses(): Observable<any> {
     return this.http.get(`${this.infoUrl}`, this.httpOptions)
       .pipe(
-        map(res => {
-          console.log(res);
+        map((res: any) => {
+          return res.data?.cell_types || [];
         }),
       )
       .pipe(
-        tap(_ => this.log('fetched heroes')),
-        catchError(this.handleError<any[]>('getHeroes', [])),
+        tap(_ => this.log('fetched getStatuses')),
+        catchError(this.handleError<any[]>('getStatuses', [])),
       );
-
   }
 
   private log(message: string) {
