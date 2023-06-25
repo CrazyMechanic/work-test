@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "../mixins" as *;
 
 .container {
   width: 770px;
@@ -10,6 +10,13 @@
 .package {
   @include cont-style;
   display: flex;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid #032EDD;
+    background: var(--1, radial-gradient(50% 50.00% at 50% 50.00%, #FFF 0%, #FDFDFD 73.96%, #FCFCFC 100%));
+    box-shadow: 0 0 6px 0 #032EDD;
+  }
 
   &__container {
     display: flex;
@@ -91,7 +98,7 @@
 .btn {
   height: 60px;
   flex-shrink: 0;
-
+  cursor: pointer;
   border-radius: 4px;
 
   &__container {

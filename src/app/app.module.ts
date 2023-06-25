@@ -14,6 +14,7 @@ import { LComponent } from './cell-size/boxes/l/l.component';
 import { XlComponent } from './cell-size/boxes/xl/xl.component';
 import { XxlComponent } from './cell-size/boxes/xxl/xxl.component';
 import { XxxlComponent } from './cell-size/boxes/xxxl/xxxl.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { XxxlComponent } from './cell-size/boxes/xxxl/xxxl.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
