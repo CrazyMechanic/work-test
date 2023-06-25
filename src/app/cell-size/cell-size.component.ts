@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../services/http.service';
-import { AppComponent } from '../app.component';
 import { catchError, tap } from 'rxjs';
 
 @Component({
@@ -10,9 +9,12 @@ import { catchError, tap } from 'rxjs';
   styleUrls: ['./cell-size.component.scss'],
 })
 export class CellSizeComponent implements OnInit {
-  cellTypes: any = [];
 
-  constructor(private router: Router, private httpService: HttpService, private appComponent: AppComponent) {
+  cellTypes: any = [];
+  private uid: string | null;
+
+  constructor(private router: Router, private httpService: HttpService, private activatedRoute: ActivatedRoute) {
+    this.uid = this.activatedRoute.snapshot.paramMap.get('uid');
   }
 
   ngOnInit() {
@@ -42,7 +44,6 @@ export class CellSizeComponent implements OnInit {
     const btn = document.getElementById('submit') as HTMLButtonElement;
 
     if (pack && pack.attributes.style.textContent === 'border-color: green') {
-      console.log(pack.attributes.style.textContent);
       btn.disabled = false;
     } else {
       btn.disabled = true;
@@ -50,10 +51,10 @@ export class CellSizeComponent implements OnInit {
   }
 
   back() {
-    this.router.navigate(['/packed']);
+    this.router.navigate([this.uid, 'packed']);
   }
 
   submit() {
-    this.router.navigate(['/home']);
+    this.router.navigate([this.uid]);
   }
 }

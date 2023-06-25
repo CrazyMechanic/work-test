@@ -23,6 +23,7 @@ export class HttpService {
   infoUrl: string = `${this.url}/api/2.0.0/public/orders/device/${this.device_uid}/cells/statuses/?type=5`;
 
   constructor(private http: HttpClient, private messageService: MessageService) {
+    
   }
 
   getInfo(): Observable<any> {

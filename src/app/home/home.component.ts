@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,13 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
-  constructor(private router: Router) {
+  private uid: string | null;
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.uid = this.activatedRoute.snapshot.paramMap.get('uid');
   }
 
   openPackedComponent() {
-    this.router.navigate(['/packed']);
-    console.log();
+    this.router.navigate(['packed'], {relativeTo: this.activatedRoute});
   }
 }

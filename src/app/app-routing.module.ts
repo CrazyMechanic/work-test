@@ -5,10 +5,9 @@ import { PackedComponent } from './packed/packed.component';
 import { CellSizeComponent } from './cell-size/cell-size.component';
 
 const routes: Routes = [
-  // {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'packed', component: PackedComponent},
-  {path: 'cell-size', component: CellSizeComponent},
+  {path: ':uid', component: HomeComponent},
+  {path: ':uid/packed', component: PackedComponent},
+  {path: ':uid/cell-size', component: CellSizeComponent},
 ];
 
 @NgModule({
