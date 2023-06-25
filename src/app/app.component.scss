@@ -23,6 +23,26 @@
     display: flex;
     gap: 44px;
 
+    &-container {
+      &:hover .header__nav-details {
+        display: block;
+      }
+    }
+
+    &-details {
+      margin-top: 30px;
+      padding-right: 10px;
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      & ol {
+        display: block;
+      }
+    }
 
     &-instruction {
       margin: 34px 20px 0;

@@ -21,7 +21,7 @@ export class CellSizeComponent implements OnInit {
     this.httpService.getStatuses().pipe(
       tap((res: any) => {
         this.cellTypes = res;
-        this.arr();
+        this.boxStyle();
       }),
       catchError(error => {
         console.error('Error getting info:', error);
@@ -30,7 +30,7 @@ export class CellSizeComponent implements OnInit {
     ).subscribe();
   }
 
-  arr() {
+  boxStyle() {
     this.cellTypes.forEach((item: any) => {
       const el = document.getElementById(item.type);
       if (item.has_empty) el?.setAttribute('style', 'border-color: green');
@@ -45,8 +45,10 @@ export class CellSizeComponent implements OnInit {
 
     if (pack && pack.attributes.style.textContent === 'border-color: green') {
       btn.disabled = false;
+      btn.setAttribute('style', 'background: #032EDD');
     } else {
       btn.disabled = true;
+      btn.setAttribute('style', 'background: rgba(3, 46, 221, 0.5)');
     }
   }
 

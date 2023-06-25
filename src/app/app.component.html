@@ -2,7 +2,17 @@
   <div class="header__container">
     <div class="header__logo"></div>
     <div class="header__nav">
-      <div class="header__nav-instruction">ІНСТРУКЦІЯ</div>
+      <div class="header__nav-container">
+        <div class="header__nav-instruction">ІНСТРУКЦІЯ</div>
+        <div class="header__nav-details">
+          <ol>
+            <li>Оберіть "Надіслати посилку через поштомат"</li>
+            <li>Перевірте чи надійно упаковане відправлення</li>
+            <li>Оберіть вільну ячейку, за Вашим розміром</li>
+            <li>Надисніть "Підтвердити"</li>
+          </ol>
+        </div>
+      </div>
       <div class="header__nav-post-id">Поштомат №{{getDevice()}}</div>
     </div>
   </div>
@@ -17,5 +27,4 @@
 
 
 <router-outlet></router-outlet>
-<!--<app-packed></app-packed>-->
-<!--<app-cell-size></app-cell-size>-->
+
